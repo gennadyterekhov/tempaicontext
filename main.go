@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
-	fmt.Println("listening on localhost:8080")
+	fmt.Println("listening on 0.0.0.0:8080")
 
-	err := http.ListenAndServe("localhost:8080", http.HandlerFunc(handler))
+	err := http.ListenAndServe("0.0.0.0:8080", http.HandlerFunc(handler))
 	if err != nil {
 		log.Fatalln(err.Error())
 	}
